@@ -34,7 +34,7 @@ Then run the setup script to create a python virtual environment and install dep
     $ ./setup_venv.sh
     
 Switch to the newly created virtual environment and run the unit tests:
-ource ./cfenv/bin/activat
+
     $ source ./cfenv/bin/activate
     $ source env_local
     $ nosetests test/unit/test_skeleton.py
@@ -79,7 +79,7 @@ Make a local commit so that you get a unique app name in your manifest:
 
 Create a manifest.yml for your development space:
 
-    $ ./make_manifest.sh development
+    $ ./make_manifest.sh test
 
 And finally push the app:
 
