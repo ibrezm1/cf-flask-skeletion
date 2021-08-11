@@ -1,0 +1,6 @@
+---
+inherit: manifest-base.yml
+applications:
+ - name: skeleton-638c46f
+   env:
+     APP_DEBUG: 1
