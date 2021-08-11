@@ -34,10 +34,10 @@ Then run the setup script to create a python virtual environment and install dep
     $ ./setup_venv.sh
     
 Switch to the newly created virtual environment and run the unit tests:
-
-    $ workon cf-flask-skeleton
+ource ./cfenv/bin/activat
+    $ source ./cfenv/bin/activate
     $ source env_local
-    $ nosetests test/unit
+    $ nosetests test/unit/test_skeleton.py
     .....
     ----------------------------------------------------------------------
     Ran 5 tests in 0.151s
