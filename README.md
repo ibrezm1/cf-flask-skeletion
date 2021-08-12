@@ -179,8 +179,12 @@ Some points worth calling out are:
 * `sudo: required` is needed because Travis' cloud foundry deployment mechanism can't run within a container.
 * In the `before_deploy` section we set up the runtime.txt and run make_manifest.sh to create the manifest.yml.  Note that travis will run the 'cf push' itself.
 * `edge: true` is required because the CF deployment is not available in mainline Travis.
-* `space: staging` and the other cloud foundry settings in the 'deploy' section are essentially the arguments to `cf login`.
+* `space: test` and the other cloud foundry settings in the 'deploy' section are essentially the arguments to `cf login`.
 * Conditions are set so we only deploy the python 3.4 build, to avoid deploying the same app twice
+* cf apps # to get running apps 
+* cf app <name>
+* cf delete <name>
+* cf logs <name> --recent
 
 See [the travis docs](http://docs.travis-ci.com/user/deployment/cloudfoundry/) for more information on integrating Travis with Cloud Foundry
 
