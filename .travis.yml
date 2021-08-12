@@ -5,7 +5,6 @@ python:
 install: pip install -r requirements.txt
 script: nosetests test/unit/test_skeleton.py
 before_deploy:
-- "./setup_runtime.sh"
 - "./make_manifest.sh test"
 deploy:
   edge: true

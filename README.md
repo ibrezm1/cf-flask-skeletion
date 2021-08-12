@@ -185,6 +185,7 @@ Some points worth calling out are:
 * cf app <name>
 * cf delete <name>
 * cf logs <name> --recent
+* cf apps | tail +5 | cut -d ' ' -f 1 | grep "my-filter" | xargs -n 1 cf delete -f #Delete specific apps 
 
 See [the travis docs](http://docs.travis-ci.com/user/deployment/cloudfoundry/) for more information on integrating Travis with Cloud Foundry
 
