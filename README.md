@@ -191,6 +191,7 @@ Some points worth calling out are:
 * cf scale skeleton-cb70c0f -i 2
 
 See Add Git config entry [here](https://stackoverflow.com/questions/19595067/git-add-commit-and-push-commands-in-one) which i use for lazy gitting   
+See here for [skip ci](https://stackoverflow.com/questions/32791470/exclude-files-from-triggering-a-travis-ci-build-on-github) for just readme updates 
 See [the travis docs](http://docs.travis-ci.com/user/deployment/cloudfoundry/) for more information on integrating Travis with Cloud Foundry
 
 ### skeleton/skeleton.py
