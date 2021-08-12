@@ -174,6 +174,8 @@ Setup Git access token repo scope [here](https://docs.github.com/en/github/authe
 Some points worth calling out are:
 * gittoken=<Gittokenfromabove>
 * travis login --pro -X --com --github-token $gittoken
+* travis encrypt --add deploy.password --com #Press ctrl D to update 
+* git commit the files
 * `sudo: required` is needed because Travis' cloud foundry deployment mechanism can't run within a container.
 * In the `before_deploy` section we set up the runtime.txt and run make_manifest.sh to create the manifest.yml.  Note that travis will run the 'cf push' itself.
 * `edge: true` is required because the CF deployment is not available in mainline Travis.
