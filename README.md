@@ -175,6 +175,7 @@ Some points worth calling out are:
 * gittoken=<Gittokenfromabove>
 * travis login --pro -X --com --github-token $gittoken
 * travis encrypt --add deploy.password --com #Press ctrl D to update 
+* need --com to swith from org to com 
 * git commit the files
 * `sudo: required` is needed because Travis' cloud foundry deployment mechanism can't run within a container.
 * In the `before_deploy` section we set up the runtime.txt and run make_manifest.sh to create the manifest.yml.  Note that travis will run the 'cf push' itself.
@@ -185,8 +186,11 @@ Some points worth calling out are:
 * cf app <name>
 * cf delete <name>
 * cf logs <name> --recent
-* cf apps | tail +5 | cut -d ' ' -f 1 | grep "my-filter" | xargs -n 1 cf delete -f #Delete specific apps 
+* cf apps |  grep stopped | cut -d ' ' -f 1 | xargs -n 1 cf delete -f
+* cf env skeleton-cb70c0f    #Get enviornment variables 
+* cf scale skeleton-cb70c0f -i 2
 
+See Add Git config entry [here](https://stackoverflow.com/questions/19595067/git-add-commit-and-push-commands-in-one) which i use for lazy gitting
 See [the travis docs](http://docs.travis-ci.com/user/deployment/cloudfoundry/) for more information on integrating Travis with Cloud Foundry
 
 ### skeleton/skeleton.py
