@@ -1,0 +1,19 @@
+language: python
+sudo: required
+python:
+- '3.8'
+install: pip install -r requirements.txt
+script: nosetests test/unit/test_skeleton.py
+before_deploy:
+- "./setup_runtime.sh"
+- "./make_manifest.sh staging"
+deploy:
+  edge: true
+  provider: cloudfoundry
+  api: https://api.de.a9s.eu
+  username: ripocipur.norefosod@mentonit.net
+  organization: ripocipur_norefosod_mentonit_net
+  space: test
+  on:
+    branch: main
+    python: '3.8'
