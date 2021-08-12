@@ -165,8 +165,15 @@ Identical to the staging manifest template
 
 ### .travis.yml
 
-Probably the most complex file in the project, this specifies to Travis CI how to build, test and deploy the application to staging.  Some points worth calling out are:
+Probably the most complex file in the project, this specifies to Travis CI how to build, test and deploy the application to staging.
+Install Ruby [here](https://www.ruby-lang.org/en/documentation/installation/#apt)
+Install Gem [here](https://github.com/travis-ci/travis.rb#installation)   
+Setup travis cf [here](https://docs.travis-ci.com/user/deployment/cloudfoundry/)
+Setup Git access token repo scope [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
+Some points worth calling out are:
+* gittoken=<Gittokenfromabove>
+* travis login --pro -X --com --github-token $gittoken
 * `sudo: required` is needed because Travis' cloud foundry deployment mechanism can't run within a container.
 * In the `before_deploy` section we set up the runtime.txt and run make_manifest.sh to create the manifest.yml.  Note that travis will run the 'cf push' itself.
 * `edge: true` is required because the CF deployment is not available in mainline Travis.
