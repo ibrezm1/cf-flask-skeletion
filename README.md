@@ -190,7 +190,7 @@ Some points worth calling out are:
 * cf env skeleton-cb70c0f    #Get enviornment variables 
 * cf scale skeleton-cb70c0f -i 2
 
-See Add Git config entry [here](https://stackoverflow.com/questions/19595067/git-add-commit-and-push-commands-in-one) which i use for lazy gitting
+See Add Git config entry [here](https://stackoverflow.com/questions/19595067/git-add-commit-and-push-commands-in-one) which i use for lazy gitting 
 See [the travis docs](http://docs.travis-ci.com/user/deployment/cloudfoundry/) for more information on integrating Travis with Cloud Foundry
 
 ### skeleton/skeleton.py
