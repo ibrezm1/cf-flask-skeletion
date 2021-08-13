@@ -7,3 +7,4 @@ activate () {
 }
 activate
 pip install -r requirements.txt
+pip install coverage
