@@ -170,6 +170,7 @@ Install Ruby [here](https://www.ruby-lang.org/en/documentation/installation/#apt
 Install Gem [here](https://github.com/travis-ci/travis.rb#installation)   
 Setup travis cf [here](https://docs.travis-ci.com/user/deployment/cloudfoundry/)
 Setup Git access token repo scope [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+Setup codecov [here](https://github.com/codecov/example-python)
 
 Some points worth calling out are:
 * gittoken=<Gittokenfromabove>
@@ -189,6 +190,7 @@ Some points worth calling out are:
 * cf apps |  grep stopped | cut -d ' ' -f 1 | xargs -n 1 cf delete -f
 * cf env skeleton-cb70c0f    #Get enviornment variables 
 * cf scale skeleton-cb70c0f -i 2
+* bash <(curl -s https://codecov.io/bash) for uploading code cov 
 
 See Add Git config entry [here](https://stackoverflow.com/questions/19595067/git-add-commit-and-push-commands-in-one) which i use for lazy gitting   
 See here for [skip ci](https://stackoverflow.com/questions/32791470/exclude-files-from-triggering-a-travis-ci-build-on-github) for just readme updates 
